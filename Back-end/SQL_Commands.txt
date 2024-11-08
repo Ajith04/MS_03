@@ -1,0 +1,38 @@
+CREATE DATABASE [ITEC DB];
+
+USE [ITEC DB];
+
+CREATE TABLE [Main Courses] (
+[Main Course Id] INT IDENTITY (1,1) PRIMARY KEY,
+[Course Name] NVARCHAR (50),
+);
+
+CREATE TABLE [Course Levels] (
+[Course Id] NVARCHAR (20) PRIMARY KEY,
+[Level] NVARCHAR (50),
+[Main Course Id] INT,
+[Thumbnail] VARBINARY (max),
+[Duration] NVARCHAR (50),
+[Course Fee] DECIMAL,
+
+FOREIGN KEY ([Main Course Id]) REFERENCES [Main Courses] ([Main Course Id])
+);
+
+CREATE TABLE [Instructors] (
+[Instructor Id] INT IDENTITY (1,1) PRIMARY KEY,
+[Instructor Name] NVARCHAR (100),
+[Age] int,
+[Mobile] NVARCHAR (20),
+[Date of Join] DATE,
+[Email] NVARCHAR (100),
+[Address] NVARCHAR (100)
+);
+
+CREATE TABLE [Instructor Enrollment] (
+[Enrollment Id] INT IDENTITY (1,1) PRIMARY KEY,
+[Course Id] NVARCHAR (20),
+[Instructor Id] INT,
+
+FOREIGN KEY ([Course Id]) REFERENCES [Course Levels] ([Course Id]),
+FOREIGN KEY ([Instructor Id]) REFERENCES [Instructors] ([Instructor Id])
+);
