@@ -1,12 +1,11 @@
-﻿using ITEC_API.Models;
-
-namespace ITEC_API.DTO.RequestDTO
+﻿namespace ITEC_API.DTO.RequestDTO
 {
-    public class CourseLevelRequestDTO
+    public class CourseRequestDTO
     {
         public string CourseId { get; set; }
+        public string CourseName { get; set; }
         public string Level { get; set; }
-        public byte[] Thumbnail { get; set; }
+        public IFormFile Thumbnail { get; set; }
         public string Duration { get; set; }
         public decimal CourseFee { get; set; }
     }

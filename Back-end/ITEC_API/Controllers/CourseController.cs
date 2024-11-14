@@ -1,4 +1,5 @@
 ﻿using ITEC_API.DTO.RequestDTO;
+using ITEC_API.DTO.ResponseDTO;
 using ITEC_API.IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,10 +17,17 @@ namespace ITEC_API.Controllers
         }
 
         [HttpPost ("add-new-course")]
-        public async Task<IActionResult> addNewCourse(MainCourseRequestDTO maincourserequestdto)
+        public async Task<IActionResult> addNewCourse(CourseRequestDTO courseRequest)
         {
-            await _icourseservice.addNewCourse(maincourserequestdto);
+            await _icourseservice.addNewCourse(courseRequest);
             return Ok();
+        }
+
+        [HttpGet ("get-all-courses")]
+        public async Task<IActionResult> getAllCourses()
+        {
+            var allCourses = await _icourseservice.getAllCourses();
+            return Ok(allCourses);
         }
     }
 }

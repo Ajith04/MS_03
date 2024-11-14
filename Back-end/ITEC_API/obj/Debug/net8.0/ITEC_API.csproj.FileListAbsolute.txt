@@ -140,3 +140,4 @@ E:\Remains\MS_03\Back-end\ITEC_API\obj\Debug\net8.0\refint\ITEC_API.dll
 E:\Remains\MS_03\Back-end\ITEC_API\obj\Debug\net8.0\ITEC_API.pdb
 E:\Remains\MS_03\Back-end\ITEC_API\obj\Debug\net8.0\ITEC_API.genruntimeconfig.cache
 E:\Remains\MS_03\Back-end\ITEC_API\obj\Debug\net8.0\ref\ITEC_API.dll
+E:\Remains\MS_03\Back-end\ITEC_API\obj\Debug\net8.0\ITEC_API.sourcelink.json
